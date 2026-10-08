@@ -1,0 +1,170 @@
+body {
+    color: white;
+    background: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.kantotan {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.content-row {
+    display: flex;
+
+    justify-content: left;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.content-item {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.item-title {
+    font-size: 25px;
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.content-image {
+    width: 250px;
+    height: 400px;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.content-image:hover {
+    transform: scale(1.1);
+
+    filter: drop-shadow(
+        0 0 10px white
+    );
+}
+
+* {
+
+    box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    /* DARK MODE IMAGE */
+    background-image: url("KenNguso.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+
+    color: white;
+
+    transition:
+        background-image 0.5s ease,
+        color 0.4s ease;
+}
+
+
+/* LIGHT MODE */
+body.light-mode {
+    /* LIGHT MODE IMAGE */
+    background-image: url("Dancel.png");
+
+    color: #111;
+}
+
+
+/* OPTIONAL DARK OVERLAY */
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: -1;
+}
+     
+.theme-switch {
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 65px;
+    height: 34px;
+    background: #333;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.theme-switch::before {
+
+    color: rgb(0, 0, 0);
+    content: "Ken";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 3px;
+    top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(252, 252, 252);
+    border-radius: 50%;
+    font-size: 16px; transition: 0.4s;
+}
+
+body.light-mode .theme-switch {
+    
+    background: #ddd;
+}
+
+body.light-mode .theme-switch::before {
+
+     content: "Dancel"; transform: translateX(31px);
+}
+
+.content {
+    
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+
+a img {
+    border: none;
+    outline: none;
+    display: block;
+}
